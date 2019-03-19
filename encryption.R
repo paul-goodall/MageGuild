@@ -1,3 +1,4 @@
+# The source of all MAGIC =)
 # ===========================================================
 source_encrypted <- function(my_url, my_fname, my_pwd_file, my_path=getwd()){
   com <- "wget -q -O my_path/my_fname.enc my_url;
