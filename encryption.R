@@ -1,5 +1,4 @@
-
-
+# ===========================================================
 source_encrypted <- function(my_url, my_fname, my_pwd_file, my_path=getwd()){
   com <- "wget -q -O my_path/my_fname.enc my_url;
   openssl aes-256-cbc -in my_path/my_fname.enc -d -pass file:my_pwd_file -out my_path/my_fname.R"
@@ -11,7 +10,7 @@ source_encrypted <- function(my_url, my_fname, my_pwd_file, my_path=getwd()){
   r_file <- paste0(my_path,"/", my_fname, ".R")
   source(r_file)
 }
-
+# ===========================================================
 git_push <- function(my_dir, my_comment="another commit"){
   
   com <- "git -C my_dir add -A;
@@ -23,7 +22,8 @@ git_push <- function(my_dir, my_comment="another commit"){
   cat(com)
   system(com)
 }
-
+# ===========================================================
 pull_repo <- function(){
   
 }
+# ===========================================================
